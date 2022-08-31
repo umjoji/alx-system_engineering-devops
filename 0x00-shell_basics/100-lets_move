@@ -1,2 +1,2 @@
 #!/bin/bash
-mv $(ls -I isSoCool) /tmp/u \n
+mv [[:upperi]] /tmp/u 
