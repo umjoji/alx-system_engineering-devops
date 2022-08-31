@@ -1,2 +1,2 @@
 #!/bin/bash
-ls '[[:upper:]]*' | mv /. /tmp/u \n
+mv `ls -I isSoCool` /. /tmp/u \n
