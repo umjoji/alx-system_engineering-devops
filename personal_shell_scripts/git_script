@@ -1,0 +1,11 @@
+#!/bin/bash
+
+git add .
+
+read -p "Enter commit message: " commit_message
+
+git commit -m "$commit_message"
+
+read -p "Enter branch to push to: " branch
+
+git push "$branch"
