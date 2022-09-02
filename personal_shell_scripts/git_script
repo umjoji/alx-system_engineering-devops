@@ -8,4 +8,4 @@ git commit -m "$commit_message"
 
 read -p "Enter branch to push to: " branch
 
-git push "$branch"
+git push origin "$branch"
