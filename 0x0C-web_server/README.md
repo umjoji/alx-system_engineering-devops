@@ -24,11 +24,11 @@ The server is accessible at [umjoji](http://umjoji.tech).
   that configures a new Ubuntu machine with Nginx.
   * Nginx listens on port 80.
   * When querying Nginx at its root `/` with a `curl` GET request,
-  it returns a page containing the string `Holberton School`.
+  it returns a page containing the string `Hello World!`.
 
 * **2. Setup a domain name**
   * [2-setup_a_domain_name](./2-setup_a_domain_name): A text file containing
-  the domain name set up for the server through Gandi.
+  the domain name set up for the server through [get.tech] (https://get.tech).
 
 * **3. Redirection**
   * [3-redirection](./3-redirection): Bash script that configures a new Ubuntu
@@ -45,23 +45,9 @@ The server is accessible at [umjoji](http://umjoji.tech).
   plus:
     * Features a custom 404 page containing the string `Ceci n'est pas une page`.
 
-* **5. Design a beautiful 404 page**
-  * A custom-designed 404 error page for my server, accessible at
-  [bdbnb.site/404](http://bdbnb.site/404).
-
-* **6. Deploy fast, deploy well**
-  * [fabfile.py](./fabfile.py): A Python Fabric configuration file defining
-  the following functions:
-  * `pack`
-    * Usage: `fabric pack`
-    * Creates a tar gzipped archive of the current directory named
-    `holbertonwebapp.tar.gz` in the local directory.
-  * `deploy`
-    * Usage: `fabric -H <remote server IP> deploy`
-    * Uploads the archive `holbertonwebapp.tar.gz` to the `/tmp`
-    directory of the remote server.
-    * Creates the directory `/tmp/holbertonwebapp` in the remote server.
-    * Untars `holbertonwebapp.tar.gz` in the `/tmp/holbertonwebapp` directory
-    of the remote server.
-  * `clean`
-    * Deletes the archive `holbertonwebapp.tar.gz` in the local directory.
+* **7. Install Nginx server with Puppet**
+  * Install and configure a server using Puppet
+  * Nginx is listening on port 80
+  * When querying Nginx at its root `/` with a `curl` GET request,
+  it returns a page containing the string `Hello World!`.
+  * Redirection is a "301 Moved Permanently"
