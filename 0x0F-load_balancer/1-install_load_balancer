@@ -2,7 +2,7 @@
 # Installs and setup haproxy
 
 apt-get install  -y --no-install-recommends software-properties-common
-aadd-apt-repository ppa:vbernat/haproxy-2.6
+add-apt-repository ppa:vbernat/haproxy-2.6
 apt-get -y update
 apt-get install haproxy=2.6.\*
 
