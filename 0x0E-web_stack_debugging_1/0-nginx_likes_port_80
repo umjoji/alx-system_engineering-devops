@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# kills the rogue nginx process and changes the default file to point to the right one
+# what’s keeping your Ubuntu container’s Nginx installation from listening on port 8?
 # configures nginx to run and listen to port 80
 rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
