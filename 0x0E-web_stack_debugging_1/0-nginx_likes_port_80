@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# kills the rogue nginx process and changes the default file to point to the right one
+# configures nginx to run and listen to port 80
+kill 26
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
