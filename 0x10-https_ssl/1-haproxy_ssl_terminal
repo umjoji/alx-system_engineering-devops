@@ -35,20 +35,20 @@ defaults
 
 #start of parameters for umjoji.tech
 frontend umjoji.tech-http-frontend
-	bind	 *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	 umjoji.tech-backend
+    bind *:80
+    http-request set-header X-Forwarded-Proto http
+    default_backend umjoji.tech-backend
 
 
 frontend  umjoji.tech-https-frontend
     bind *:80
-	bind *:443 ssl crt /etc/ssl/umjoji.tech.pem
-	http-request set-header X-Forwarded-Proto https
+    bind *:443 ssl crt /etc/ssl/umjoji.tech.pem
+    http-request set-header X-Forwarded-Proto https
     default_backend umjoji.tech-backend
 
 
 backend umjoji.tech-backend
-        balance roundrobin
-        server 107444-web-01 100.25.169.174:80 check
-        server 107444-web-02 34.229.69.57:80 check
+    balance roundrobin
+    server 107444-web-01 100.25.169.174:80 check
+    server 107444-web-02 34.229.69.57:80 check
 # end of parameters
